@@ -28,9 +28,9 @@ const BookingForm = (props) => {
             <div className="hotel-details">
               <h2>Table details</h2>
               <div>
-                <label htmlFor="book-date">Choose Date</label>
                 <input
                   id="book-date"
+                  placeholder="Choose Date"
                   value={date}
                   onChange={(e) => handleChange(e.target.value)}
                   type="date"
@@ -39,7 +39,6 @@ const BookingForm = (props) => {
               </div>
 
               <div>
-                <label htmlFor="book-time">Choose Time:</label>
                 <select
                   id="book-time"
                   value={time}
@@ -53,18 +52,17 @@ const BookingForm = (props) => {
               </div>
 
               <div>
-                <label htmlFor="book-guests">Number of guests:</label>
                 <input
                   id="book-guests"
                   value={guests}
                   placeholder="Number of Guests"
                   pattern="[1-9]"
                   required
+                  type="number"
                   onChange={(e) => setGuests(e.target.value)}
                 ></input>
               </div>
               <div>
-                <label htmlFor="book-occassion">Occassion:</label>
                 <select
                   id="book-occassion"
                   key={occassion}
@@ -82,7 +80,7 @@ const BookingForm = (props) => {
             <div className="personal-details">
               <div>
                 <h2>Personal Details</h2>
-                <label htmlFor="first-name">First Name:</label>
+
                 <input
                   id="first-name"
                   placeholder="First Name"
@@ -93,7 +91,6 @@ const BookingForm = (props) => {
                 ></input>
               </div>
               <div>
-                <label htmlFor="last-name">Last Name:</label>
                 <input
                   id="last-name"
                   placeholder="Last Name"
@@ -104,7 +101,6 @@ const BookingForm = (props) => {
                 ></input>
               </div>
               <div>
-                <label htmlFor="email">E-mail:</label>
                 <input
                   id="email"
                   placeholder="E-mail"
@@ -115,7 +111,6 @@ const BookingForm = (props) => {
                 ></input>
               </div>
               <div>
-                <label htmlFor="number">Phone number:</label>
                 <input
                   id="number"
                   placeholder="Phone number"

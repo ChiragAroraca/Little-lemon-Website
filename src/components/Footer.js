@@ -19,12 +19,12 @@ const Footer = () => {
               </Link>
             </li>
             <li className="footer-item">
-              <Link to="/Menu" className="footer-item">
+              <Link to="/menu-show" className="footer-item">
                 Menu
               </Link>
             </li>
             <li className="footer-item">
-              <Link to="/BookingForm" className="footer-item">
+              <Link to="/booking" className="footer-item">
                 Reservation
               </Link>
             </li>

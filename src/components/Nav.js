@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import logo from "../images/Logo .svg";
+import MenuShow from "./MenuShow";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,18 +30,14 @@ const Nav = () => {
         <Link to="/about" className="nav-item">
           About
         </Link>
-        <Link to="/services" className="nav-item">
-          Services
-        </Link>
-        <Link to="/menu" className="nav-item">
+
+        <Link to="/menu-show" className="nav-item">
           Menu
         </Link>
-        <Link to="/reservations" className="nav-item">
+        <Link to="/booking" className="nav-item">
           Reservations
         </Link>
-        <Link to="/order-online" className="nav-item">
-          Order Online
-        </Link>
+
         <Link to="/login" className="nav-item">
           Login
         </Link>

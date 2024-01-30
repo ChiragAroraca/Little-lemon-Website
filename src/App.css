@@ -139,11 +139,11 @@ body {
 
 @media (max-width: 1100px) {
   .banner-img img {
-    width: 30%;
-    height: 120px;
+    width: 40%;
+    height: 150px;
     position: relative;
     left: 75%;
-    bottom: 110px;
+    bottom: 10px;
     opacity: 80%;
     border-radius: 50%;
   }
@@ -161,73 +161,7 @@ body {
 /* Booking Form */
 .form {
   width: 100%;
-}
-.form-details {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Karla", sans-serif;
-}
-.form-details input,
-select {
-  border-radius: 5px;
-  border: none;
   text-align: center;
-  color: grey;
-}
-fieldset {
-  background-color: #495e57;
-  color: white;
-}
-
-.hotel-details input,
-select {
-  width: 150px;
-  height: 30px;
-  margin: 20px;
-  position: relative;
-  left: 90px;
-}
-.form-details label {
-  font-size: 1.3rem;
-}
-.hotel-details #book-guests {
-  margin-left: 0;
-  position: relative;
-  left: 55px;
-}
-.hotel-details #book-occassion {
-  position: relative;
-  left: 105px;
-  width: 160px;
-}
-.hotel-details #book-time {
-  position: relative;
-  left: 84px;
-  width: 155px;
-}
-
-.hotel-details {
-  text-align: left;
-  margin-left: 100px;
-}
-
-.personal-details input {
-  width: 150px;
-  height: 30px;
-  margin: 20px 150px;
-}
-.personal-details #first-name {
-  position: relative;
-  right: 5px;
-}
-.personal-details #email {
-  position: relative;
-  left: 38px;
-}
-
-.personal-details #number {
-  position: relative;
-  right: 37px;
 }
 
 .submit-btn {
@@ -249,19 +183,39 @@ select {
   transition: 0.5s ease;
   color: white;
 }
+.form-details {
+  display: flex;
+  justify-content: space-around;
+}
+
+fieldset {
+  background-color: #495e57;
+  height: 35%;
+}
+.form-details input,
+select {
+  height: 30px;
+  width: 200px;
+  border-radius: 7px;
+  margin: 20px;
+  border: none;
+  text-align: center;
+  color: white;
+  font-family: "Karla", serif;
+  background-color: #577269;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-details input::placeholder {
+  color: white;
+}
 
 .hotel-details h2 {
   color: #f4ce14;
-  margin-bottom: 50px;
-
-  text-align: center;
+  text-shadow: 2px 2px #363535;
 }
 .personal-details h2 {
-  position: relative;
-  left: 120px;
-  margin-bottom: 50px;
-
   color: #f4ce14;
+  text-shadow: 2px 2px #363535;
 }
 
 .confirmed-booking {
@@ -272,6 +226,14 @@ select {
 .confirmed-booking span {
   color: #f4ce14;
   margin-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  .form-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* Menu */
@@ -397,12 +359,6 @@ select {
   padding: 150px 20px;
 }
 
-.testimonial-container:hover {
-  width: 92%;
-  height: 500px;
-  transition: 0.3s ease-in-out;
-}
-
 .testimonial-card {
   width: 17%;
   height: 400px;
@@ -442,6 +398,11 @@ select {
     width: 50%;
     margin: 5%;
   }
+  .testimonial-card:hover {
+    width: 70%;
+    transition: 0.5s ease-in-out;
+  }
+
   .chicago-img,
   .chicago-img1 {
     display: none;
@@ -570,4 +531,50 @@ select {
   text-align: center;
   font-family: "Karla", serif;
   font-weight: 700;
+}
+
+/* Menu */
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding: 10px 100px;
+  background-color: #495e57;
+  color: white;
+  font-family: "Karla", sans-serif;
+}
+.dish-header-img img {
+  width: 70%;
+  border-radius: 10px;
+  margin-left: 40%;
+  position: relative;
+  top: 15%;
+}
+.dish-menu {
+  width: 50%;
+}
+.dish-menu p {
+  padding-right: 30%;
+}
+.dish-menu h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  color: #f4ce14;
+  margin: 40px 0;
+}
+@media (max-width: 1700px) {
+  .dish-header-img img {
+    width: 50%;
+  }
+}
+@media (max-width: 1000px) {
+  .dish-header-img img {
+    display: none;
+  }
+  .dish-menu,
+  .dish-menu p {
+    width: 100%;
+
+    text-align: center;
+  }
 }

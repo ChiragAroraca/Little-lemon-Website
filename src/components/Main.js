@@ -3,6 +3,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Booking from "./Booking";
 import ConfirmedBooking from "./ConfirmedBooking";
+import MenuShow from "./MenuShow";
 
 const Main = () => {
   const seedRandom = function (seed) {
@@ -61,6 +62,7 @@ const Main = () => {
         }
       />
       <Route path="/confirmed" element={<ConfirmedBooking />} />
+      <Route path="/menu-show" element={<MenuShow />} />
     </Routes>
   );
 };
