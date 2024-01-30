@@ -1,38 +1,573 @@
-.App {
-  text-align: center;
+/* NavBar */
+body {
+  overflow-x: hidden;
+}
+.bar {
+  width: 40px;
+  height: 3px;
+  background-color: rgb(69, 68, 68);
+  margin: 3px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  margin-top: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-container {
+  padding: 10px 13%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-container .nav-item {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  margin: 0 30px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 7px;
+  height: 29px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links.visible {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  height: 45%;
+  background-color: #495e57;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nav-item:hover {
+  font-size: 17px;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 1300px) {
+  .nav-links {
+    display: none;
+    transition: 0.9s ease-in;
+    z-index: 999;
+  }
+
+  .nav-links .nav-item {
+    margin-top: 30px;
+    color: whitesmoke;
+  }
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-icon:hover {
+    box-shadow: 2px 8px 7px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s ease-in;
+  }
+  .bar {
+    background: #333333;
+  }
+}
+
+/* Header Section */
+
+.header {
+  background-color: #495e57;
+}
+
+.banner {
+  color: white;
+  margin-left: 10%;
+  padding: 5%;
+}
+
+.banner p {
+  padding-right: 80%;
+  font-family: "Karla", sans-serif;
+}
+.banner h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  color: #f4ce14;
+  margin: 0;
+}
+
+.header-button {
+  background-color: #f4ce14;
+  color: black;
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.header-button:hover {
+  box-shadow: 2px 8px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.4s ease-in;
+}
+.banner-img {
+  position: absolute;
+  right: 13%;
+  top: 19%;
+  width: 400px;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+}
+
+@media (max-width: 1100px) {
+  .banner-img img {
+    width: 30%;
+    height: 120px;
+    position: relative;
+    left: 75%;
+    bottom: 110px;
+    opacity: 80%;
+    border-radius: 50%;
+  }
+  .header {
+    text-align: left;
+    padding: 0px;
+  }
+  .header p {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 0 200px 0 0;
+  }
+}
+
+/* Booking Form */
+.form {
+  width: 100%;
+}
+.form-details {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Karla", sans-serif;
+}
+.form-details input,
+select {
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  color: grey;
+}
+fieldset {
+  background-color: #495e57;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hotel-details input,
+select {
+  width: 150px;
+  height: 30px;
+  margin: 20px;
+  position: relative;
+  left: 90px;
+}
+.form-details label {
+  font-size: 1.3rem;
+}
+.hotel-details #book-guests {
+  margin-left: 0;
+  position: relative;
+  left: 55px;
+}
+.hotel-details #book-occassion {
+  position: relative;
+  left: 105px;
+  width: 160px;
+}
+.hotel-details #book-time {
+  position: relative;
+  left: 84px;
+  width: 155px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hotel-details {
+  text-align: left;
+  margin-left: 100px;
+}
+
+.personal-details input {
+  width: 150px;
+  height: 30px;
+  margin: 20px 150px;
+}
+.personal-details #first-name {
+  position: relative;
+  right: 5px;
+}
+.personal-details #email {
+  position: relative;
+  left: 38px;
+}
+
+.personal-details #number {
+  position: relative;
+  right: 37px;
+}
+
+.submit-btn {
+  display: block;
+  margin: 20px auto;
+  height: 40px;
+  width: 150px;
+  border: none;
+  background-color: #f4ce14;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #495e57;
+}
+
+.submit-btn:hover {
+  box-shadow: 2px 8px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.5s ease;
+  color: white;
+}
+
+.hotel-details h2 {
+  color: #f4ce14;
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+.personal-details h2 {
+  position: relative;
+  left: 120px;
+  margin-bottom: 50px;
+
+  color: #f4ce14;
+}
+
+.confirmed-booking {
+  text-align: center;
+  margin: 160px auto;
+  color: #495e57;
+}
+.confirmed-booking span {
+  color: #f4ce14;
+  margin-left: 5px;
+}
+
+/* Menu */
+
+.menu-container {
+  margin: 10% auto;
+  padding: 10px 13%;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+}
+
+.menu-container h2 {
+  color: #000;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 750px) {
+  .menu-header {
+    display: block;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .menu-items {
+    margin: 0 auto;
   }
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+}
+
+.menu-items {
+  height: 460px;
+  width: 350px;
+  background-color: rgb(237, 237, 237);
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+}
+
+.menu-container img {
+  width: 100%;
+  height: 233px;
+  border-radius: 8px;
+}
+
+.menu-content {
+  padding: 5px 15px;
+}
+
+.menu-content .heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-content .heading p {
+  color: #d0ae05;
+  font-weight: 700;
+}
+
+.orderbtn1 {
+  border: none;
+  background-color: #f4ce14;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #495e57;
+  height: 40px;
+  width: 150px;
+}
+
+.orderBtn2 {
+  display: block;
+  border: none;
+  background-color: #f4ce14;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-weight: 700;
+  color: #495e57;
+  height: 30px;
+  width: 120px;
+}
+
+.orderBtn2:hover {
+  box-shadow: 2px 8px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s ease-in-out;
+}
+.orderbtn1:hover {
+  box-shadow: 2px 8px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s ease-in-out;
+}
+/* Testimonials */
+
+.testimonial-header {
+  text-align: center;
+  font-family: "Markazi Text", serif;
+  font-size: 2.5rem;
+  margin-top: 14%;
+  color: #495e57;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px auto;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90%;
+  height: 480px;
+  border-radius: 50%;
+  background-color: #f4ce14;
+  padding: 150px 20px;
+}
+
+.testimonial-container:hover {
+  width: 92%;
+  height: 500px;
+  transition: 0.3s ease-in-out;
+}
+
+.testimonial-card {
+  width: 17%;
+  height: 400px;
+  background-color: rgb(237, 237, 237);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "karla", serif;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.testimonial-card:hover {
+  width: 20%;
+  transition: 0.5s ease-in-out;
+}
+.testimonial-card img {
+  width: 50%;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0;
+}
+
+@media (max-width: 900px) {
+  .testimonial-container {
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+  }
+
+  .testimonial-card {
+    width: 50%;
+    margin: 5%;
+  }
+  .chicago-img,
+  .chicago-img1 {
+    display: none;
+  }
+  .chicago-container h1,
+  p {
+    text-align: center;
+  }
+}
+
+/* Chicago */
+.chicago-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  text-align: left;
+  margin: 10% 0 10% 10%;
+  font-family: "karla", serif;
+}
+
+.chicago-h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  color: #f4ce14;
+}
+.chicago-h2 {
+  color: #495e57;
+  font-family: "Markazi Text", serif;
+}
+
+.chicago-container img {
+  width: 37%;
+  border-radius: 10px;
+  box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.chicago-img1 {
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+.chicago-container img:hover {
+  width: 40%;
+  transition: 0.5s ease-in-out;
+}
+
+.sub-container-1 {
+  margin-left: 150px;
+}
+
+.sub-container-1 p {
+  font-size: 1.1rem;
+}
+
+.sub-container-2 {
+  width: 300%;
+}
+
+.chicago-img {
+  position: relative;
+  top: 80px;
+  right: 190px;
+}
+@media (max-width: 1126px) {
+  .chicago-img {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .sub-container-2 {
+    width: 30;
+    padding: 5%;
+  }
+}
+
+/* Footer */
+.primary-background {
+  background-color: rgb(223, 222, 222);
+  padding: 20px;
+}
+
+.container-footer {
+  font-family: "Karla", serif;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 10%;
+  height: 250px;
+  margin: 50px 40px 40px 5%;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+.footer-item:hover {
+  color: #f4ce14;
+}
+
+.footerHd {
+  margin: 50px 0;
+}
+.footerSocials {
+  margin-right: 100px;
+}
+
+.fa-brands {
+  font-size: 1.7rem;
+  margin: 0 10px;
+}
+.fa-brands:hover {
+  color: #f4ce14;
+}
+
+.trademark {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Karla", serif;
+  font-weight: 700;
 }
