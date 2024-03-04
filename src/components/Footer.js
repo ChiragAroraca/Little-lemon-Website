@@ -10,7 +10,7 @@ const Footer = () => {
       <section className="primary-background section">
         <div className="container-footer">
           <img className="footer-logo" src={footerImage} alt="error" />
-          <div>
+          <div className="sitemap">
             <h3 className="footerHd">Sitemap</h3>
 
             <li className="footer-item">
@@ -49,9 +49,9 @@ const Footer = () => {
           <div className="footerSocials">
             <h3 className="footerHd">Connect with Us</h3>
             <div>
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-facebook"></i>
+              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-twitter"></i>
             </div>
           </div>
         </div>

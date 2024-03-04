@@ -156,8 +156,37 @@ body {
     margin-bottom: 20px;
     padding: 0 200px 0 0;
   }
+  .banner {
+    margin: 0;
+  }
+  .chicago-container {
+    margin: 0% 0% 0% 0% !important;
+    padding: 3%;
+  }
 }
-
+@media (max-width: 500px) {
+  .banner-img img {
+    width: 20vw;
+    height: 10vh;
+  }
+}
+@media (max-width: 400px) {
+  .banner-img {
+    display: none;
+  }
+  .header .banner {
+    text-align: center;
+  }
+  .header .banner p {
+    padding: 5%;
+    text-align: center;
+  }
+  .menu-items .menu-content p {
+    margin: 0;
+    font-size: 13px;
+    padding: 0;
+  }
+}
 /* Booking Form */
 .form {
   width: 100%;
@@ -389,6 +418,7 @@ select {
   .testimonial-container {
     border-radius: 50px;
     display: flex;
+    width: 90%;
     flex-direction: column;
     align-items: center;
     height: 50%;
@@ -403,13 +433,16 @@ select {
     transition: 0.5s ease-in-out;
   }
 
-  .chicago-img,
-  .chicago-img1 {
+  .sub-container-2 {
     display: none;
   }
   .chicago-container h1,
   p {
     text-align: center;
+    padding: 5%;
+  }
+  .menu-items {
+    margin: 5% auto 10% auto;
   }
 }
 
@@ -449,7 +482,7 @@ select {
 }
 
 .sub-container-1 {
-  margin-left: 150px;
+  margin: 0 auto 0 auto;
 }
 
 .sub-container-1 p {
@@ -480,7 +513,7 @@ select {
 /* Footer */
 .primary-background {
   background-color: rgb(223, 222, 222);
-  padding: 20px;
+  padding: 10px;
 }
 
 .container-footer {
@@ -491,7 +524,7 @@ select {
 .footer-logo {
   width: 10%;
   height: 250px;
-  margin: 50px 40px 40px 5%;
+  margin: 3% 1% 1% 1%;
 }
 
 .container-footer {
@@ -503,7 +536,7 @@ select {
   list-style: none;
   text-decoration: none;
   color: black;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 20px 0;
 }
 
@@ -531,6 +564,23 @@ select {
   text-align: center;
   font-family: "Karla", serif;
   font-weight: 700;
+}
+@media (max-width: 800px) {
+  .footer-logo {
+    display: none;
+  }
+  .container-footer .sitemap {
+    display: none;
+  }
+  .container-footer div {
+    margin: 5%;
+  }
+  .footerSocials div i {
+    margin-bottom: 10%;
+  }
+  .footerSocials .footerHd {
+    margin-bottom: 35%;
+  }
 }
 
 /* Menu */
